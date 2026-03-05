@@ -123,3 +123,12 @@ document.getElementById("search-btn").addEventListener("click", () => {
         displayLessonWords(wordFilters)
     })
 })
+
+document.getElementById("see-ans-1").addEventListener("click", () => {
+    const answer = document.getElementById("ans-1");
+    const newElement = document.createElement("p");
+    newElement.innerHTML=`
+    <p class="mt-3 text-[#62748E]">You can start learning English on this website by exploring the beginner lessons, practicing daily exercises, and using interactive tools like quizzes and flashcards to improve your vocabulary and grammar.</p>
+    `
+    answer.append(newElement)
+})
