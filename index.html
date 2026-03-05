@@ -84,11 +84,11 @@
   <section class="w-11/12 mx-auto flex flex-col-reverse lg:flex-row justify-between items-center gap-14">
     <div class="content flex-1 space-y-6">
       <h2 class="text-4xl md:text-5xl font-bold text-[#18181B]"><span class="text-[#00BCFF]">English</span> is Easy!!</h2>
-      <p class="text-base md:text-2xl text-[#18181B]/[80%] font-medium">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+      <p class="text-base md:text-2xl text-[#18181B]/[80%] font-medium font-bangla">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
       <fieldset class="fieldset lg:w-full">
           <input type="text" class="input outline-none border-[1px]" placeholder="Enter Your Name" />
           <input type="password" class="input outline-none" placeholder="Password" />
-          <button class="btn btn-primary mt-4 w-36">Get Started</button>
+          <button class="btn btn-primary mt-4 w-36 hover:btn-outline">Get Started</button>
         </fieldset>
     </div>
     <div>
@@ -96,5 +96,43 @@
     </div>
   </section>
   <!-- Banner section Ended -->
+  <!-- Lesson Section -->
+  <section class="w-11/12 mx-auto space-y-8 mt-24">
+    <h2 class="text-center text-4xl md:text-5xl font-bold text-[#18181B]"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h2>
+    <div id="lesson-container" class="flex flex-wrap gap-5 justify-center">
+    </div>
+    <div class="flex justify-center">
+      <div class="join">
+  <div>
+    <label class="input validator join-item">
+      <input type="text" id="search-input" class="outline-none border-none" placeholder="Search Vocabularies" required />
+    </label>
+    <div class="validator-hint hidden">Enter valid email address</div>
+  </div>
+  <button id="search-btn" class="btn btn-primary join-item">Search</button>
+</div>
+    </div>
+    <div id="word-container" class="bg-base-200 p-10 rounded-2xl grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="text-center col-span-full">
+        <p class="font-bangla text-base  text-[#79716B] mb-3">আপনি এখনো কোন Lesson Select করেন নি</p>
+        <h3 class="text-[2rem] text-[#292524] font-bangla ">একটি Lesson Select করুন।</h3>
+      </div>
+    </div>
+  </section>
+  <!-- Loading Section -->
+  <section id="spin" class="flex justify-center py-10 hidden">
+    <span class="loading loading-dots loading-xl"></span>
+  </section>
+  <!-- Loading section Ended -->
+<dialog id="words_modal" class="modal">
+  <div class="modal-box">
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <div id="details-container" class="space-y-6">
+    </div>
+</dialog>
+  <!-- Lesson Section Ended -->
+   <script src="./script/script.js"></script>
   </body>
 </html>
