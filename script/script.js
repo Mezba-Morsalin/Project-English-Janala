@@ -1,3 +1,8 @@
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
+}
 const lessonLoad = () => {
     fetch("https://openapi.programming-hero.com/api/levels/all")
     .then(response => response.json())
@@ -56,7 +61,7 @@ const displayLessonWords = (words) => {
         <h3 class="font-bangla text-[#18181B]/[80%] text-[2rem] font-semibold">${element.meaning ? element.meaning : "অর্থ পাওয়া যায়নি"} / ${element.pronunciation ? element.pronunciation : "Pronunciation পাওয়া যায়নি"}</h3>
         <div class="flex justify-between mt-8">
           <button onclick="loadWordDetails(${element.id})" class="bg-[#BADEFF]/[0.26] p-4 rounded cursor-pointer text-[#374957]"><i class="fa-solid fa-circle-exclamation"></i> </button>
-          <button class="bg-[#BADEFF]/[0.26] p-4 cursor-pointer rounded text-[#374957]"><i class="fa-solid fa-volume-high"></i </button>
+          <button onClick="pronounceWord('${element.word}')" class="bg-[#BADEFF]/[0.26] p-4 cursor-pointer rounded text-[#374957]"><i class="fa-solid fa-volume-high"></i </button>
         </div>
       </div>
        `
